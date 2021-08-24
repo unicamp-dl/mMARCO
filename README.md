@@ -23,7 +23,7 @@ The translated passages collection and the queries set (training and validation)
 * [Chinese](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/chinese)
 
 
-## Fine-tuned Models
+## Released Model Checkpoints
 * [ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)
 * [ptT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k)
 * [mT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco)
@@ -31,3 +31,20 @@ The translated passages collection and the queries set (training and validation)
 * [mMiniLM-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-pt-msmarco)
 * [mMiniLM-en-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-en-pt-msmarco)
 * [mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco)
+
+
+# How to Cite
+
+If you extend or use this work, please cite the [paper][paper] where it was
+introduced:
+
+```
+@article{rosa2021cost,
+      title={A cost-benefit analysis of cross-lingual transfer methods},
+      author={Rosa, Guilherme Moraes and Bonifacio, Luiz Henrique and de Souza, Leandro Rodrigues and Lotufo, Roberto and Nogueira, Rodrigo},
+      journal={arXiv preprint arXiv:2105.06813},
+      year={2021}
+    }
+```
+
+[paper]: https://arxiv.org/abs/2105.06813
