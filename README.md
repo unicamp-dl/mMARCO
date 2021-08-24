@@ -13,14 +13,14 @@ To translate the MS MARCO dataset, we use MarianNMT an open-source neural machin
 ## Translated Datasets
 As described in our work, we made available 8 translated versions of MS MARCO passage ranking dataset.
 The translated passages collection and the queries set (training and validation) are available at:
-* [Spanish] (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/spanish)
-* French (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/french)
-* Portuguese (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/portuguese)
-* Italian (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/italian)
-* Indonesian (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/indonesian)
-* German (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/german)
-* Russian (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/russian)
-* Chinese(https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/chinese)
+* [Spanish](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/spanish)
+* [French](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/french)
+* [Portuguese](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/portuguese)
+* [Italian](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/italian)
+* [Indonesian](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/indonesian)
+* [German](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/german)
+* [Russian](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/russian)
+* [Chinese](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/chinese)
 
 
 ## Fine-tuned Models
