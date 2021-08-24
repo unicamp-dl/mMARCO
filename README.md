@@ -11,5 +11,10 @@ The code available here is the same used in our paper **mMARCO: A Multilingual V
 ## Translated Datasets
 
 ## Fine-tuned Models
-* mT5-base-multi-msmarco
-* mt5-base-en-pt-msmarco
+* [ptt5-base-pt-msmarco]: (https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)
+* [ptt5-base-en-pt-msmarco]: (https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k)
+* [mt5-base-en-pt-msmarco]: (https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco)
+* [mT5-base-multi-msmarco]: (https://huggingface.co/unicamp-dl/mt5-base-multi-msmarco)
+* [mMiniLM-pt-msmarco]: (https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-pt-msmarco)
+* [mMiniLM-en-pt-msmarco]: (https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-en-pt-msmarco)
+* [mMiniLM-multi-msmarco]: (https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco)
