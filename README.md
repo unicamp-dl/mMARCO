@@ -5,10 +5,23 @@ This repository presents a neural machine translation-based method for translati
 The code available here is the same used in our paper **mMARCO: A Multilingual Version of MS MARCO Passage RankingDataset**.
 
 ## Dataset
+We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
 
 ## MarianMNT
+To translate the MS MARCO dataset, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework.
 
 ## Translated Datasets
+As described in our work, we made available 8 translated versions of MS MARCO passage ranking dataset.
+The translated passages collection and the queries set (training and validation) are available at:
+* [Spanish] (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/spanish)
+* French (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/french)
+* Portuguese (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/portuguese)
+* Italian (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/italian)
+* Indonesian (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/indonesian)
+* German (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/german)
+* Russian (https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/russian)
+* Chinese(https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/chinese)
+
 
 ## Fine-tuned Models
 * [ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)
