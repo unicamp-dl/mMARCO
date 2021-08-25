@@ -41,7 +41,7 @@ After translating, it is necessary to reassemble the file, as the documents were
 ```
 python create_translated_collection.py --input_file translated_data/translated_file --output_file translated_{tgt}_collection
 ```
-
+Translating the entire passages collection of MS MARCO took about 80 hours using a Tesla V100.
 # How to Cite
 
 If you extend or use this work, please cite the [paper][paper] where it was
