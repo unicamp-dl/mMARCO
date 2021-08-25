@@ -4,23 +4,6 @@ A multilingual version of MS MARCO passage ranking dataset
 This repository presents a neural machine translation-based method for translating [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
 The code available here is the same used in our paper **mMARCO: A Multilingual Version of MS MARCO Passage RankingDataset**.
 
-## Dataset
-We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
-
-## Translation Model
-To translate the MS MARCO dataset, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework.
-
-## How To Translate
-In order to allow other users to translate MS MARCO passage ranking dataset to other languages (or a dataset of your own will), we provide the ```translate.py``` script. This script expects .tsv file, which each line is formed by a ```document_id \t document``` format.
-```
-python translate.py --model_name_or_path Helsinki-NLP/opus-mt-{src}-{tgt} --target_language tgt_code--input_file collection.tsv --output_dir translated_data/
-```
-After translating, it is necessary to reassemble the file, as the documents were split into sentences.
-```
-python create_translated_collection.py --input_file translated_data/translated_file --output_file translated_{tgt}_collection
-```
-
-
 ## Translated Datasets
 As described in our work, we made available 8 translated versions of MS MARCO passage ranking dataset.
 The translated passages collection and the queries set (training and validation) are available at:
@@ -42,7 +25,22 @@ The translated passages collection and the queries set (training and validation)
 * [mMiniLM-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-pt-msmarco)
 * [mMiniLM-en-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-en-pt-msmarco)
 * [mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco)
+* 
+## Dataset
+We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
 
+## Translation Model
+To translate the MS MARCO dataset, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework.
+
+## How To Translate
+In order to allow other users to translate MS MARCO passage ranking dataset to other languages (or a dataset of your own will), we provide the ```translate.py``` script. This script expects .tsv file, which each line is formed by a ```document_id \t document``` format.
+```
+python translate.py --model_name_or_path Helsinki-NLP/opus-mt-{src}-{tgt} --target_language tgt_code--input_file collection.tsv --output_dir translated_data/
+```
+After translating, it is necessary to reassemble the file, as the documents were split into sentences.
+```
+python create_translated_collection.py --input_file translated_data/translated_file --output_file translated_{tgt}_collection
+```
 
 # How to Cite
 
