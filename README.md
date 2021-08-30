@@ -18,6 +18,8 @@ The translated passages collection and the queries set (training and validation)
 
 
 ## Released Model Checkpoints
+Our available fine-tuned models are: 
+- [PTT5](https://github.com/unicamp-dl/PTT5):
 * [ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)
 * [ptT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k)
 * [mT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco)
