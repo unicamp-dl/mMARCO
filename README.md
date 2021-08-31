@@ -37,7 +37,7 @@ Our available fine-tuned models are:
 |[mMiniLM-en-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-en-pt-msmarco) |a mMiniLM model fine-tuned on both English and Portuguese MS MARCO | 0.375|
 |[mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco) |a mMiniLM model fine-tuned on mMARCO | 0.363|
 
-* MRR@10 on English MS MARCO
+\* MRR@10 on English MS MARCO
 
 ## Dataset
 We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
