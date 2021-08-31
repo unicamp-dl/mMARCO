@@ -27,7 +27,8 @@ Our available fine-tuned models are:
 * [mMiniLM-en-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-en-pt-msmarco): a mMiniLM model fine-tuned on both English and Portuguese MS MARCO.
 * [mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco): a mMiniLM model fine-tuned on mMARCO.
 
-| **Model** | **Description** | **MRR@10 on English MS MARCO** |
+| Model | Description | MRR@10 on English MS MARCO |
+| :--- | :---: | ---: |
 |[ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)| a [PTT5](https://github.com/unicamp-dl/PTT5) model fine-tuned on Portuguese MS MARCO | 0.188 |
 |[ptT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k) | a PTT5 model fine-tuned on English and Portuguese MS MARCO| 0.343|
 |[mT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco) |a [mT5](https://github.com/google-research/multilingual-t5) model fine-tuned on both English and Portuguese MS MARCO | 0.375|
