@@ -2,7 +2,7 @@
 A multilingual version of MS MARCO passage ranking dataset
 
 This repository presents a neural machine translation-based method for translating the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
-The code available here is the same used in our paper **mMARCO: A Multilingual Version of MS MARCO Passage RankingDataset**.
+The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage RankingDataset**](https://arxiv.org/abs/2108.13897).
 
 ## Translated Datasets
 As described in our work, we made available 8 translated versions of MS MARCO passage ranking dataset.
@@ -54,12 +54,14 @@ If you extend or use this work, please cite the [paper][paper] where it was
 introduced:
 
 ```
-@article{rosa2021cost,
-      title={A cost-benefit analysis of cross-lingual transfer methods},
-      author={Rosa, Guilherme Moraes and Bonifacio, Luiz Henrique and de Souza, Leandro Rodrigues and Lotufo, Roberto and Nogueira, Rodrigo},
-      journal={arXiv preprint arXiv:2105.06813},
-      year={2021}
-    }
+@misc{bonifacio2021mmarco,
+      title={mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset}, 
+      author={Luiz Henrique Bonifacio and Israel Campiotti and Roberto Lotufo and Rodrigo Nogueira},
+      year={2021},
+      eprint={2108.13897},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
-[paper]: https://arxiv.org/abs/2105.06813
+[paper]: https://arxiv.org/abs/2108.13897
