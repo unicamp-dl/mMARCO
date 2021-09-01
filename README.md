@@ -2,7 +2,7 @@
 A multilingual version of MS MARCO passage ranking dataset
 
 This repository presents a neural machine translation-based method for translating the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
-The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage RankingDataset**](https://arxiv.org/abs/2108.13897).
+The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897).
 
 ## Translated Datasets
 As described in our work, we made available 8 translated versions of MS MARCO passage ranking dataset.
