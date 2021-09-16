@@ -53,8 +53,9 @@ Translating the entire passages collection of MS MARCO took about 80 hours using
 The steps reported here are the same used for any language from mMARCO. 
 
 ## Data Prep
-```
+
 Using [pygaggle](https://github.com/castorini/pygaggle) scripts, we convert the mMARCO Portuguese collection into json files:
+```
 python pygaggle/tools/scripts/msmarco/convert_collection_to_jsonl.py \
   --collection-path path/to/portuguese_collection.tsv \
   --output-folder collections/portuguese-msmarco-passage/collection_jsonl
