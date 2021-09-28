@@ -49,7 +49,7 @@ python create_translated_collection.py --input_file translated_data/translated_f
 ```
 Translating the entire passages collection of MS MARCO took about 80 hours using a Tesla V100.
 
-# BM25 Baseline for Portuguese Language
+# BM25 Baseline for Portuguese
 The steps reported here are the same used for any language from mMARCO. 
 
 ## Data Prep
