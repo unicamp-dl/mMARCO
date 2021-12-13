@@ -5,16 +5,8 @@ This repository presents a neural machine translation-based method for translati
 The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897).
 
 ## Translated Datasets
-As described in our work, we made available 8 translated versions of MS MARCO passage ranking dataset.
-The translated passages collection and the queries set (training and validation) are available at:
-* [Spanish](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/spanish)
-* [French](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/french)
-* [Portuguese](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/portuguese)
-* [Italian](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/italian)
-* [Indonesian](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/indonesian)
-* [German](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/german)
-* [Russian](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/russian)
-* [Chinese](https://console.cloud.google.com/storage/browser/msmarco-translated/multi_msmarco/chinese)
+As described in our work, we made available the MS MARCO passage ranking dataset translated to 8 languages (Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish).
+The translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco/tree/main/data/v1.1.
 
 
 ## Released Model Checkpoints
