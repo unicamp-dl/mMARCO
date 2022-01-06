@@ -52,14 +52,13 @@ Our available fine-tuned models are:
   <tr>
     <td>mT5</td>
     <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="">Link</\a></td>
-    <td><a href="">Link</\a><br><a href="">Link</\a></td>
-    <td><a href="">Link</\a><br><a href="">Link</\a></td>
+    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
+    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
   </tr>
   <tr>
     <td>mMiniLM</td>
     <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a></td>
+    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
     <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
   </tr>
 </table>
