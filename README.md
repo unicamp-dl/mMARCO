@@ -35,7 +35,7 @@ Our available fine-tuned models are:
   <tr>
     <th>Model</th>
     <th>Fine-tuned</th>
-    <th colspan=2>Download*</th>
+    <th colspan=2>Download</th>
   </tr>
   <tr>
     <th></th>
@@ -46,20 +46,20 @@ Our available fine-tuned models are:
   <tr>
     <td>PTT5</td>
     <td>PT<br>EN+PT</td>
-    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v1">Link</a><br>0.00</td>
-    <td>0.00<br>0.00</td>
+    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v1">Link</a><br><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v2">Link</\a></td>
+    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k-v1">Link</\a><br><a href="unicamp-dl/ptt5-base-en-pt-msmarco-100k-v2">Link</\a></td>
   </tr>
   <tr>
     <td>mT5</td>
-    <td>PT<br>EN+PT<br>MULTI</td>
-    <td>0.00<br>0.00<br>0.00</td>
-    <td>0.00<br>0.00<br>0.00</td>
+    <td>EN<br>EN+PT<br>MULTI</td>
+    <th colspan=2 a href="unicamp-dl/ptt5-base-en-pt-msmarco-100k-v2">Link</\a></th>
+    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
   </tr>
   <tr>
     <td>mMiniLM</td>
     <td>PT<br>EN+PT<br>MULTI</td>
-    <td>0.00<br>0.00<br>0.00</td>
-    <td>0.00<br>0.00<br>0.00</td>
+    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
+    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
   </tr>
 </table>
 
