@@ -35,7 +35,7 @@ Our available fine-tuned models are:
   <tr>
     <th>Model</th>
     <th>Fine-tuned</th>
-    <th colspan=2>MRR@10*</th>
+    <th colspan=2>Download*</th>
   </tr>
   <tr>
     <th></th>
@@ -46,7 +46,7 @@ Our available fine-tuned models are:
   <tr>
     <td>PTT5</td>
     <td>PT<br>EN+PT</td>
-    <td>0.00<br>0.00</td>
+    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v1">Link</a><br>0.00</td>
     <td>0.00<br>0.00</td>
   </tr>
   <tr>
