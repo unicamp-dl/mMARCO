@@ -30,20 +30,20 @@ Our available fine-tuned models are:
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
-}
+  <style>
+  table, td, th {
+    border: 1px solid black;
+  }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-td {
-  text-align: center;
-}
-</style>
+  td {
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
 
