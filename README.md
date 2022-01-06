@@ -1,7 +1,7 @@
 # mMARCO
 **mMARCO** is a multilingual version of the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
 For more information, checkout our papers:
-  * [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897)
+  * [**mMARCO: A Multilingual Version of the MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897)
   * [**A cost-benefit analysis of cross-lingual transfer methods**](https://arxiv.org/abs/2105.06813)
 <!---
 This repository presents a neural machine translation-based method for translating the MS MARCO passage ranking dataset.
