@@ -51,11 +51,9 @@ td {
   <tr>
     <th>Model</th>
     <th>Fine-tuned</th>
-    <th>Description</th>
     <th colspan=2>MRR@10*</th>
   </tr>
   <tr>
-    <th></th>
     <th></th>
     <th></th>
     <th>v1</th>
@@ -64,21 +62,18 @@ td {
   <tr>
     <td>PTT5</td>
     <td>PT<br>EN+PT</td>
-    <td>-<br>-</td>
     <td>0.00<br>0.00</td>
     <td>0.00<br>0.00</td>
   </tr>
   <tr>
     <td>mT5</td>
     <td>PT<br>EN+PT<br>MULTI</td>
-    <td>-<br>-<br>-</td>
     <td>0.00<br>0.00<br>0.00</td>
     <td>0.00<br>0.00<br>0.00</td>
   </tr>
   <tr>
     <td>mMiniLM</td>
     <td>PT<br>EN+PT<br>MULTI</td>
-    <td>-<br>-<br>-</td>
     <td>0.00<br>0.00<br>0.00</td>
     <td>0.00<br>0.00<br>0.00</td>
   </tr>
