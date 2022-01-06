@@ -58,8 +58,8 @@ Our available fine-tuned models are:
   <tr>
     <td>mMiniLM</td>
     <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
-    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
+    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v1">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v1">Link</\a></td>
+    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v2">Link</\a></td>
   </tr>
 </table>
 
