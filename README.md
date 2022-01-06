@@ -52,7 +52,7 @@ Our available fine-tuned models are:
   <tr>
     <td>mT5</td>
     <td>EN<br>EN+PT<br>MULTI</td>
-    <th> <a href="unicamp-dl/ptt5-base-en-pt-msmarco-100k-v2">Link</\a></th>
+    <th colspan=2>Download</th>
     <td><a href="">Link</\a><br><a href="">Link</\a></td>
   </tr>
   <tr>
