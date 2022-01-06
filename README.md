@@ -182,7 +182,7 @@ introduced:
 ```
 @misc{bonifacio2021mmarco,
       title={mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset}, 
-      author={Luiz Henrique Bonifacio and Israel Campiotti and Roberto Lotufo and Rodrigo Nogueira},
+      author={Luiz Henrique Bonifacio and Vitor Jeronymo and Hugo Queiroz Abonizio and Israel Campiotti and Marzieh Fadaee and  and Roberto Lotufo and Rodrigo Nogueira},
       year={2021},
       eprint={2108.13897},
       archivePrefix={arXiv},
