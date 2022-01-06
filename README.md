@@ -27,8 +27,69 @@ The translated passages collection and the queries set (training and validation)
 
 ## Released Model Checkpoints
 Our available fine-tuned models are: 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Fine-tuned</th>
+    <th>Description</th>
+    <th colspan=2>MRR@10*</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>v1</th>
+    <th>v2</th>
+  </tr>
+  <tr>
+    <td>PTT5</td>
+    <td>PT<br>EN+PT</td>
+    <td>-<br>-</td>
+    <td>0.00<br>0.00</td>
+    <td>0.00<br>0.00</td>
+  </tr>
+  <tr>
+    <td>mT5</td>
+    <td>PT<br>EN+PT<br>MULTI</td>
+    <td>-<br>-<br>-</td>
+    <td>0.00<br>0.00<br>0.00</td>
+    <td>0.00<br>0.00<br>0.00</td>
+  </tr>
+  <tr>
+    <td>mMiniLM</td>
+    <td>PT<br>EN+PT<br>MULTI</td>
+    <td>-<br>-<br>-</td>
+    <td>0.00<br>0.00<br>0.00</td>
+    <td>0.00<br>0.00<br>0.00</td>
+  </tr>
+</table>
+
+</body>
+</html>
 
 
+
+<!---
 | Model | Description | MRR@10*|
 | :--- | :--- | :---: |
 |[ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)| a [PTT5](https://github.com/unicamp-dl/PTT5) model fine-tuned on Portuguese MS MARCO | 0.188 |
@@ -40,6 +101,7 @@ Our available fine-tuned models are:
 |[mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco) |a mMiniLM model fine-tuned on mMARCO | 0.363|
 
 \* MRR@10 on English MS MARCO
+-->
 <!---
 ## Dataset
 We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
