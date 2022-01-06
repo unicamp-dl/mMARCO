@@ -27,21 +27,7 @@ The translated passages collection and the queries set (training and validation)
 
 ## Released Model Checkpoints
 Our available fine-tuned models are: 
-| Model    | Fine-tuned | Description | <td colspan=2>MRR@10*    | Five  
-|-|-|-|-|-|-
-| Span <td colspan=3>triple  <td colspan=2>double
-  
-  
-| Model | Fine-tuned | Description | MRR@10* |MRR@10* |
-| :---  |    :---    |     :---    |  :---   |  :---:  |
-| PTT5  |     PT     |      -      |  0.000  |  0.000  |
-|       |   EN +PT   |      -      |  0.000  |  0.000  |
-|  mT5  |     PT     |      -      |  0.000  |  0.000  |
-|       |   EN+PT    |      -      |  0.000  |  0.000  |
-|       |   MULTI    |      -      |  0.000  |  0.000  |
-|mMiniLM|     PT     |      -      |  0.000  |  0.000  |
-|       |   EN+PT    |      -      |  0.000  |  0.000  |
-|       |   MULTI    |      -      |  0.000  |  0.000  |
+
 
 | Model | Description | MRR@10*|
 | :--- | :--- | :---: |
