@@ -54,7 +54,7 @@ Our available fine-tuned models are:
     <td>EN<br>EN+PT<br>MULTI</td>
     <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="">Link</\a></td>
     <td><a href="">Link</\a><br><a href="">Link</\a></td>
-    <td><a href="">Link</\a><br><a href="">Link</\a><br><a href="">Link</\a></td>
+    <td><a href="">Link</\a><br><a href="">Link</\a></td>
   </tr>
   <tr>
     <td>mMiniLM</td>
