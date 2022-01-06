@@ -1,16 +1,42 @@
 # mMARCO
-A multilingual version of MS MARCO passage ranking dataset
-
-This repository presents a neural machine translation-based method for translating the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
+**mMARCO** is a multilingual version of the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
+For more information, checkout our papers:
+* [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897)
+* [**A cost-benefit analysis of cross-lingual transfer methods**](https://arxiv.org/abs/2105.06813)
+<!---
+This repository presents a neural machine translation-based method for translating the MS MARCO passage ranking dataset.
 The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897).
+-->
 
 ## Translated Datasets
+We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. There are two translated versions of mMARCO.
+
+### v1
+In v1 version, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework. The code [available here](https://github.com/unicamp-dl/mMARCO/blob/main/scripts/translate.py) is the same used in our paper.
+This version comprises 8 languages: Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish.
+
+### v2
+In v2 version, we use Google Translate to translate the dataset. In this commercial translation version, besides the 8 languages from v1, we add other 5 languages: Japanese, Dutch, Vietnamese, Hindi and Arabic.
+
+For both versions, the translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco.
+
+<!---
 As described in our work, we made available the MS MARCO passage ranking dataset translated to 8 languages (Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish).
 The translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco/tree/main/data/v1.1.
-
+-->
 
 ## Released Model Checkpoints
 Our available fine-tuned models are: 
+| Model | Fine-tuned | Description | <td colspan=2>MRR@10* |
+| :---  |    :---    |     :---    |  :---   |  :---:  |
+| PTT5  |     PT     |      -      |  0.000  |  0.000  |
+|       |   EN +PT   |      -      |  0.000  |  0.000  |
+|  mT5  |     PT     |      -      |  0.000  |  0.000  |
+|       |   EN+PT    |      -      |  0.000  |  0.000  |
+|       |   MULTI    |      -      |  0.000  |  0.000  |
+|mMiniLM|     PT     |      -      |  0.000  |  0.000  |
+|       |   EN+PT    |      -      |  0.000  |  0.000  |
+|       |   MULTI    |      -      |  0.000  |  0.000  |
 
 | Model | Description | MRR@10*|
 | :--- | :--- | :---: |
@@ -23,12 +49,14 @@ Our available fine-tuned models are:
 |[mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco) |a mMiniLM model fine-tuned on mMARCO | 0.363|
 
 \* MRR@10 on English MS MARCO
-
+<!---
 ## Dataset
 We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
-
+-->
+<!---
 ## Translation Model
 To translate the MS MARCO dataset, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework.
+-->
 
 ## How To Translate
 In order to allow other users to translate the MS MARCO passage ranking dataset to other languages (or a dataset of your own will), we provide the ```translate.py``` script. This script expects a .tsv file, in which each line follows a ```document_id \t document_text``` format.
