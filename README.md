@@ -14,9 +14,10 @@ We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprisi
   * **v1**  
   In v1 version, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework. The code [available here](https://github.com/unicamp-dl/mMARCO/blob/main/scripts/translate.py) is the same used in our paper.
   This version comprises 8 languages: Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish.
+  In the paper, we refer to these models as "Helsinki".
 
-  * **v2**  
-  In v2 version, we use Google Translate to translate the dataset. In this commercial translation version, besides the 8 languages from v1, we add other 5 languages: Japanese, Dutch, Vietnamese, Hindi and Arabic.
+  * **v2 (Recommended)**  
+  In v2 version, we use Google Translate to translate the dataset. In this commercial translation version, besides the 8 languages from v1, we add other 5 languages: Japanese, Dutch, Vietnamese, Hindi and Arabic. 
 
 For both versions, the translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco.
 
