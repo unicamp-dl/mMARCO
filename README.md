@@ -149,7 +149,7 @@ python pygaggle/tools/scripts/msmarco/msmarco_passage_eval.py \
 The output should be like:
 ```
 #####################
-MRR @10: 0.14122873743575773
+MRR @10: 0.152
 QueriesRanked: 6980
 #####################
 ```
@@ -157,7 +157,7 @@ QueriesRanked: 6980
 ## Re-ranking with mT5
 Finally, we can re-rank our BM25 initial run using [mT5-base-multi-msmarco](https://huggingface.co/unicamp-dl/mt5-base-multi-msmarco) (or each one of the previous listed models):
 ``` 
-python reranker.py --model_name_or_path=unicamp-dl/ptt5-base-en-pt-msmarco-10k \
+python reranker.py --model_name_or_path=unicamp-dl/mt5-base-en-pt-msmarco-v2 \
 --initial_run runs/run.portuguese-msmarco-passage.dev.small.tsv  \
 --corpus path/to/portuguese_collection.tsv --queries portuguese_queries.dev.small.tsv \
 --output_run runs/run.mt5-reranked-portuguese-msmarco-passage.dev.small.tsv
@@ -170,7 +170,7 @@ python pygaggle/tools/scripts/msmarco/msmarco_passage_eval.py \
 The output should be like:
 ```
 #####################
-MRR @10: 0.2832968344931086
+MRR @10: 0.306
 QueriesRanked: 6980
 #####################
 ```
