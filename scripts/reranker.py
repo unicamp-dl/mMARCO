@@ -2,7 +2,7 @@ import argparse
 import pandas as pd
 from tqdm import tqdm
 from pygaggle.rerank.base import Query, Text
-from pygaggle.rerank.transformer import MonoT5
+from pygaggle.rerank.transformer import MonoT5, SentenceTransformersReranker
 
 
 def load_corpus(path):
@@ -41,9 +41,13 @@ def main():
                         help="Path to save the reranked run.")
     parser.add_argument("--queries", default=None, type=str, required=True,
                         help="Path to the queries file.")
-
     args = parser.parse_args()
-    model = MonoT5(args.model_name_or_path)
+
+    if 't5' in args.model_name_or_path.lower():
+        model = MonoT5(args.model_name_or_path)
+    else:
+        model = SentenceTransformersReranker(args.model_name_or_path)
+
     run = load_run(args.initial_run)
     corpus = load_corpus(args.corpus)
     queries = load_queries(args.queries)
@@ -55,8 +59,7 @@ def main():
             texts = [Text(corpus[doc_id], {'docid': doc_id}, 0) for doc_id in run[query_id]]
             reranked = model.rerank(query, texts)
             for rank, document in enumerate(reranked):
-                f_out.write(f'{query_id}\tQ0\t{document.metadata["docid"]}\t{rank+1}\t \
-                        {document.score}\t{args.model_name_or_path}\n')
+                f_out.write(f'{query_id}\t{document.metadata["docid"]}\t{rank+1}\n')
     print("Done!")
 
 if __name__ == "__main__":

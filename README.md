@@ -8,8 +8,7 @@ This repository presents a neural machine translation-based method for translati
 The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897).
 -->
 
-## Translated Datasets
-We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. The old (deprecated) version of the translations and their results is available at [README_old.md](README_old.md). **mMARCO** includes 14 languages (including the original English version). All files, including the translated triples, collection, queries (training and validation) and run files, are available at [:hugs: Datasets](https://huggingface.co/datasets/unicamp-dl/mmarco).
+We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. The old (deprecated) version of the translations and their results is available at [README_old.md](README_old.md). **mMARCO** includes 14 languages (including the original English version). All files, including the translated triples, collection, queries (training and validation) and run files, are available in [:hugs: Datasets](https://huggingface.co/datasets/unicamp-dl/mmarco).
 
 ```python
 >>> dataset = load_dataset('unicamp-dl/mmarco', 'english')
@@ -106,17 +105,17 @@ The steps reported here are the same used for any language from mMARCO.
 Using [pygaggle](https://github.com/castorini/pygaggle) scripts, we convert the mMARCO Portuguese collection into JSON files:
 ```
 python pygaggle/tools/scripts/msmarco/convert_collection_to_jsonl.py \
-  --collection-path path/to/portuguese_collection.tsv \
-  --output-folder collections/portuguese-msmarco-passage/collection_jsonl
+    --collection-path path/to/portuguese_collection.tsv \
+    --output-folder collections/portuguese-msmarco-passage/collection_jsonl
 ```
 ## Indexing using [Pyserini](https://github.com/castorini/pyserini)
 Now we can index the Portuguese collection using Pyserini:
 ```
 python -m pyserini.index -collection JsonCollection \
-  -generator DefaultLuceneDocumentGenerator \
-  -threads 1 -input collections/portuguese-msmarco-passage/collection_jsonl/ \
-  -index indexes/portuguese-lucene-index-msmarco \
-  -storePositions -storeDocvectors -storeRaw -language portuguese
+    -generator DefaultLuceneDocumentGenerator \
+    -threads 1 -input collections/portuguese-msmarco-passage/collection_jsonl/ \
+    -index indexes/portuguese-lucene-index-msmarco \
+    -storePositions -storeDocvectors -storeRaw -language portuguese
 ```
 As the original English set, the built index should have 8,841,823 documents.
 
@@ -124,23 +123,24 @@ As the original English set, the built index should have 8,841,823 documents.
 Using a pygaggle script, we select only the queries that are in the qrels file:
 ```
 python pygaggle/tools/scripts/msmarco/filter_queries.py \
- --qrels path/to/qrels.dev.small.tsv \
- --queries path/to/portuguese_queries.dev.tsv \
- --output collections/portuguese-msmarco-passage/portuguese_queries.dev.small.tsv
- ```
- This script results a file with 6980 queries. Now we can retrieve from our index:
+    --qrels path/to/qrels.dev.small.tsv \
+    --queries path/to/portuguese_queries.dev.tsv \
+    --output collections/portuguese-msmarco-passage/portuguese_queries.dev.small.tsv
+```
+This script results a file with 6980 queries. Now we can retrieve from our index:
  
   ```
 python -m pyserini.search --topics collections/portuguese-msmarco-passage/portuguese_queries.dev.small.tsv \
- --index indexes/portuguese-lucene-index-msmarco --language portuguese \
- --output runs/run.portuguese-msmarco-passage.dev.small.tsv  \
- --bm25 --output-format msmarco --hits 1000 --k1 0.82 --b 0.68
+     --index indexes/portuguese-lucene-index-msmarco \
+     --language portuguese \
+     --output runs/run.portuguese-msmarco-passage.dev.small.tsv  \
+     --bm25 --output-format msmarco --hits 1000 --k1 0.82 --b 0.68
   ```
  ## Evaluation
 Using the official MS MARCO evaluation script:
 ```
 python pygaggle/tools/scripts/msmarco/msmarco_passage_eval.py \
-  path/to/qrels.dev.small.tsv runs/run.portuguese-msmarco-passage.dev.small.tsv
+    path/to/qrels.dev.small.tsv runs/run.portuguese-msmarco-passage.dev.small.tsv
 ``` 
 The output should be like:
 ```
@@ -154,14 +154,15 @@ QueriesRanked: 6980
 Finally, we can re-rank our BM25 initial run using [mT5-base-multi-msmarco](https://huggingface.co/unicamp-dl/mt5-base-multi-msmarco) (or each one of the previous listed models):
 ``` 
 python reranker.py --model_name_or_path=unicamp-dl/mt5-base-en-pt-msmarco-v2 \
---initial_run runs/run.portuguese-msmarco-passage.dev.small.tsv  \
---corpus path/to/portuguese_collection.tsv --queries portuguese_queries.dev.small.tsv \
---output_run runs/run.mt5-reranked-portuguese-msmarco-passage.dev.small.tsv
+    --initial_run runs/run.portuguese-msmarco-passage.dev.small.tsv  \
+    --corpus path/to/portuguese_collection.tsv \
+    --queries portuguese_queries.dev.small.tsv \
+    --output_run runs/run.mt5-reranked-portuguese-msmarco-passage.dev.small.tsv
 ``` 
 Using the official MS MARCO evaluation script to evaluate the re-ranked results:
 ```
 python pygaggle/tools/scripts/msmarco/msmarco_passage_eval.py \
-  path/to/qrels.dev.small.tsv runs/run.mt5-reranked-portuguese-msmarco-passage.dev.small.tsv
+    path/to/qrels.dev.small.tsv runs/run.mt5-reranked-portuguese-msmarco-passage.dev.small.tsv
 ``` 
 The output should be like:
 ```
@@ -169,6 +170,13 @@ The output should be like:
 MRR @10: 0.306
 QueriesRanked: 6980
 #####################
+```
+
+## Training mMiniLM
+An example of mMiniLM-based models training is provided in `train_minilm.py` script.
+
+```
+python train_minilm.py --output_dir ./mminilm-pt --language portuguese
 ```
  
 # How to Cite
