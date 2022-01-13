@@ -9,17 +9,13 @@ The code available here is the same used in our paper [**mMARCO: A Multilingual 
 -->
 
 ## Translated Datasets
-We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. The old (deprecated) version of the translations and their results is available at [README_old.md](README_old.md).
+We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. The old (deprecated) version of the translations and their results is available at [README_old.md](README_old.md). **mMARCO** includes 14 languages (including the original English version). All files, including the translated triples, collection, queries (training and validation) and run files, are available at [:hugs: Datasets](https://huggingface.co/datasets/unicamp-dl/mmarco).
 
-  * **v1**  
-  In v1 version, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework. The code [available here](https://github.com/unicamp-dl/mMARCO/blob/main/scripts/translate.py) is the same used in our paper.
-  This version comprises 8 languages: Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish.
-  In the paper, we refer to these models as "Helsinki".
-
-  * **v2 (Recommended)**  
-  In v2 version, we use Google Translate to translate the dataset. In this commercial translation version, besides the 8 languages from v1, we add other 5 languages: Japanese, Dutch, Vietnamese, Hindi and Arabic. 
-
-The translated triples, collection and queries (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco.
+```python
+>>> dataset = load_dataset('unicamp-dl/mmarco', 'english')
+>>> dataset['train'][1]
+{'query': 'what fruit is native to australia', 'positive': 'Passiflora herbertiana. A rare passion fruit native to Australia. (...)'}
+```
 
 <!---
 As described in our work, we made available the MS MARCO passage ranking dataset translated to 8 languages (Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish).
