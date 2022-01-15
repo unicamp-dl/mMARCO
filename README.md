@@ -1,4 +1,4 @@
-# mMARCO
+# mMARCO [<img src="https://img.shields.io/badge/arXiv-2108.13897-b31b1b.svg">](https://arxiv.org/abs/2108.13897)
 **mMARCO** is a multilingual version of the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
 For more information, checkout our papers:
   * [**mMARCO: A Multilingual Version of the MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897)
