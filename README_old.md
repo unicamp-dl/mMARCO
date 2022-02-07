@@ -1,6 +1,6 @@
 # mMARCO
 
-** This README refers to the old version (v1) of mMARCO. We highly recommend you use the latest dataset and models from the main [README.d] **
+**This README refers to the old version (v1) of mMARCO. We highly recommend you use the latest dataset and models from the main [README.md](/README.md)**
 
 A multilingual version of MS MARCO passage ranking dataset
 
@@ -96,8 +96,8 @@ QueriesRanked: 6980
 #####################
 ```
 
-## Re-ranking with mT5
-Finally, we can re-rank our BM25 initial run using [mT5-base-multi-msmarco](https://huggingface.co/unicamp-dl/mt5-base-multi-msmarco) (or each one of the previous listed models):
+## Re-ranking with PTT5
+Finally, we can re-rank our BM25 initial run using [ptt5-base-en-pt-msmarco-10k](https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k) (or each one of the previous listed models):
 ``` 
 python reranker.py --model_name_or_path=unicamp-dl/ptt5-base-en-pt-msmarco-10k \
 --initial_run runs/run.portuguese-msmarco-passage.dev.small.tsv  \
