@@ -1,14 +1,15 @@
 # mMARCO [<img src="https://img.shields.io/badge/arXiv-2108.13897-b31b1b.svg">](https://arxiv.org/abs/2108.13897)
-**mMARCO** is a multilingual version of the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
-For more information, checkout our papers:
+**mMARCO** is a multilingual version of the MS MARCO passage ranking dataset.
+For more information, checkout our paper:
   * [**mMARCO: A Multilingual Version of the MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897)
-  * [**A cost-benefit analysis of cross-lingual transfer methods**](https://arxiv.org/abs/2105.06813)
 <!---
 This repository presents a neural machine translation-based method for translating the MS MARCO passage ranking dataset.
 The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897).
 -->
 
-We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. The old (deprecated) version of the translations and their results is available at [README_old.md](README_old.md). **mMARCO** includes 14 languages (including the original English version). All files, including the translated triples, collection, queries (training and validation) and run files, are available in [:hugs: Datasets](https://huggingface.co/datasets/unicamp-dl/mmarco).
+We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. **mMARCO** includes 14 languages (including the original English version).
+
+All files, including the translated triples, collection, queries (training and validation) and run files, are available in [:hugs: Datasets](https://huggingface.co/datasets/unicamp-dl/mmarco).
 
 ```python
 >>> dataset = load_dataset('unicamp-dl/mmarco', 'english')
@@ -16,75 +17,24 @@ We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprisi
 {'query': 'what fruit is native to australia', 'positive': 'Passiflora herbertiana. A rare passion fruit native to Australia. (...)'}
 ```
 
-<!---
-As described in our work, we made available the MS MARCO passage ranking dataset translated to 8 languages (Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish).
-The translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco/tree/main/data/v1.1.
--->
+**The old/deprecated version (v1) of mMARCO is available at [README_old.md](README_old.md)**
 
 ## Released Model Checkpoints
-Our available fine-tuned models are: 
-<!DOCTYPE html>
-<html>
-<body>
-
-<table>
-  <tr>
-    <th>Model</th>
-    <th>Fine-tuned</th>
-    <th colspan=2>Download</th>
-  </tr>
-  <tr>
-    <th></th>
-    <th></th>
-    <th>v1</th>
-    <th>v2</th>
-  </tr>
-  <tr>
-    <td>PTT5</td>
-    <td>PT<br>EN+PT</td>
-    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v1">Link</a><br><a href="https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k-v1">Link</\a></td>
-    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-100k-v2">Link</\a></td>
-  </tr>
-  <tr>
-    <td>mT5</td>
-    <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco-v1">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-mmarco-v1">Link</\a></td>
-    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-mmarco-v2">Link</\a></td>
-  </tr>
-  <tr>
-    <td>mMiniLM</td>
-    <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v1">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v1">Link</\a></td>
-    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v2">Link</\a></td>
-  </tr>
-</table>
-
-</body>
-</html>
+Our available fine-tuned models are:
 
 
+| Model | Description | EN | PT |
+| :--- | :--- | :---: | :---: |
+|[ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v2)| a [PTT5](https://github.com/unicamp-dl/PTT5) model fine-tuned on Portuguese MS MARCO | 0.200 | 0.299 |
+|[ptT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-100k-v2) | a PTT5 model fine-tuned on English and Portuguese MS MARCO| 0.354 | 0.301 |
+|[mT5-base-en-msmarco](https://huggingface.co/unicamp-dl/mt5-base-en-msmarco) |a [mT5](https://github.com/google-research/multilingual-t5) model fine-tuned on English MS MARCO | 0.371| 0.293 |
+|[mT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco-v2) |a mT5 model fine-tuned on both English and Portuguese MS MARCO | 0.374 | **0.306** |
+|[mT5-base-multi-msmarco](https://huggingface.co/unicamp-dl/mt5-base-mmarco-v2) |a mT5 model fine-tuned on mMARCO |0.366 | 0.302|
+|[mMiniLM-en-msmarco](https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco) |a [mMiniLM](https://github.com/microsoft/unilm/tree/master/minilm) model fine-tuned on English MS MARCO | **0.382** | 0.277 |
+|[mMiniLM-en-pt-msmarco](https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v2) |a mMiniLM model fine-tuned on both English and Portuguese MS MARCO | 0.374 | 0.299|
+|[mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v2) |a mMiniLM model fine-tuned on mMARCO | 0.366| 0.277|
 
-<!---
-| Model | Description | MRR@10*|
-| :--- | :--- | :---: |
-|[ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)| a [PTT5](https://github.com/unicamp-dl/PTT5) model fine-tuned on Portuguese MS MARCO | 0.188 |
-|[ptT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k) | a PTT5 model fine-tuned on English and Portuguese MS MARCO| 0.343|
-|[mT5-base-en-pt-msmarco](https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco) |a [mT5](https://github.com/google-research/multilingual-t5) model fine-tuned on both English and Portuguese MS MARCO | 0.375|
-|[mT5-base-multi-msmarco](https://huggingface.co/unicamp-dl/mt5-base-multi-msmarco) |a mT5 model fine-tuned on mMARCO |0.366 |
-|[mMiniLM-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-pt-msmarco) |a [mMiniLM](https://github.com/microsoft/unilm/tree/master/minilm) model fine-tuned on Portuguese MS MARCO | - |
-|[mMiniLM-en-pt-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-en-pt-msmarco) |a mMiniLM model fine-tuned on both English and Portuguese MS MARCO | 0.375|
-|[mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco) |a mMiniLM model fine-tuned on mMARCO | 0.363|
-
-\* MRR@10 on English MS MARCO
--->
-<!---
-## Dataset
-We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
--->
-<!---
-## Translation Model
-To translate the MS MARCO dataset, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework.
--->
+EN and PT columns refer to MRR@10 on the dev set of English and Portuguse MS MARCO, respectively.
 
 ## How To Translate
 In order to allow other users to translate the MS MARCO passage ranking dataset to other languages (or a dataset of your own will), we provide the ```translate.py``` script. This script expects a .tsv file, in which each line follows a ```document_id \t document_text``` format.

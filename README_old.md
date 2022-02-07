@@ -1,75 +1,20 @@
 # mMARCO
-**mMARCO** is a multilingual version of the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
-For more information, checkout our papers:
-  * [**mMARCO: A Multilingual Version of the MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897)
-  * [**A cost-benefit analysis of cross-lingual transfer methods**](https://arxiv.org/abs/2105.06813)
-<!---
-This repository presents a neural machine translation-based method for translating the MS MARCO passage ranking dataset.
+
+** This README refers to the old version (v1) of mMARCO. We highly recommend you use the latest dataset and models from the main [README.d] **
+
+A multilingual version of MS MARCO passage ranking dataset
+
+This repository presents a neural machine translation-based method for translating the [MS MARCO passage ranking dataset](https://microsoft.github.io/msmarco/).
 The code available here is the same used in our paper [**mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset**](https://arxiv.org/abs/2108.13897).
--->
 
 ## Translated Datasets
-We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs. There are two translated versions of mMARCO.
-
-  * **Helsinki**  
-  In v1 version, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework. The code [available here](https://github.com/unicamp-dl/mMARCO/blob/main/scripts/translate.py) is the same used in our paper.
-  This version comprises 8 languages: Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish.
-  In the paper, we refer to these models as "Helsinki".
-
-  * **Google Translate (Recommended)**  
-  In v2 version, we use Google Translate to translate the dataset. In this commercial translation version, besides the 8 languages from v1, we add other 5 languages: Japanese, Dutch, Vietnamese, Hindi and Arabic. 
-
-For both versions, the translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco.
-
-<!---
 As described in our work, we made available the MS MARCO passage ranking dataset translated to 8 languages (Chinese, French, German, Indonesian, Italian, Portuguese, Russian and Spanish).
 The translated passages collection and the queries set (training and validation) are available at https://huggingface.co/datasets/unicamp-dl/mmarco/tree/main/data/v1.1.
--->
+
 
 ## Released Model Checkpoints
 Our available fine-tuned models are: 
-<!DOCTYPE html>
-<html>
-<body>
 
-<table>
-  <tr>
-    <th>Model</th>
-    <th>Fine-tuned</th>
-    <th colspan=2>Download</th>
-  </tr>
-  <tr>
-    <th></th>
-    <th></th>
-    <th>v1</th>
-    <th>v2</th>
-  </tr>
-  <tr>
-    <td>PTT5</td>
-    <td>PT<br>EN+PT</td>
-    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v1">Link</a><br><a href="https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-10k-v1">Link</\a></td>
-    <td><a href="https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/ptt5-base-en-pt-msmarco-100k-v2">Link</\a></td>
-  </tr>
-  <tr>
-    <td>mT5</td>
-    <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco-v1">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-mmarco-v1">Link</\a></td>
-    <td><a href="https://huggingface.co/unicamp-dl/mt5-base-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-en-pt-msmarco-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mt5-base-mmarco-v2">Link</\a></td>
-  </tr>
-  <tr>
-    <td>mMiniLM</td>
-    <td>EN<br>EN+PT<br>MULTI</td>
-    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v1">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v1">Link</\a></td>
-    <td><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-msmarco">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-en-pt-msmarco-v2">Link</\a><br><a href="https://huggingface.co/unicamp-dl/mMiniLM-L6-v2-mmarco-v2">Link</\a></td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-
-
-<!---
 | Model | Description | MRR@10*|
 | :--- | :--- | :---: |
 |[ptT5-base-pt-msmarco](https://huggingface.co/unicamp-dl/ptt5-base-pt-msmarco-100k)| a [PTT5](https://github.com/unicamp-dl/PTT5) model fine-tuned on Portuguese MS MARCO | 0.188 |
@@ -81,15 +26,12 @@ Our available fine-tuned models are:
 |[mMiniLM-multi-msmarco](https://huggingface.co/unicamp-dl/multilingual-MiniLM-L6-v2-multi-msmarco) |a mMiniLM model fine-tuned on mMARCO | 0.363|
 
 \* MRR@10 on English MS MARCO
--->
-<!---
+
 ## Dataset
 We translate MS MARCO passage ranking dataset, a large-scale IR dataset comprising more than half million anonymized questions that were sampled from Bing's search query logs.
--->
-<!---
+
 ## Translation Model
 To translate the MS MARCO dataset, we use MarianNMT an open-source neural machine translation framework originally written in C++ for fast training and translation. The Language Technology Research Group at the University of Helsinki made available [more than a thousand language pairs](https://huggingface.co/Helsinki-NLP) for translation, supported by HuggingFace framework.
--->
 
 ## How To Translate
 In order to allow other users to translate the MS MARCO passage ranking dataset to other languages (or a dataset of your own will), we provide the ```translate.py``` script. This script expects a .tsv file, in which each line follows a ```document_id \t document_text``` format.
@@ -157,7 +99,7 @@ QueriesRanked: 6980
 ## Re-ranking with mT5
 Finally, we can re-rank our BM25 initial run using [mT5-base-multi-msmarco](https://huggingface.co/unicamp-dl/mt5-base-multi-msmarco) (or each one of the previous listed models):
 ``` 
-python reranker.py --model_name_or_path=unicamp-dl/mt5-base-en-pt-msmarco-v2 \
+python reranker.py --model_name_or_path=unicamp-dl/ptt5-base-en-pt-msmarco-10k \
 --initial_run runs/run.portuguese-msmarco-passage.dev.small.tsv  \
 --corpus path/to/portuguese_collection.tsv --queries portuguese_queries.dev.small.tsv \
 --output_run runs/run.mt5-reranked-portuguese-msmarco-passage.dev.small.tsv
@@ -183,7 +125,7 @@ introduced:
 ```
 @misc{bonifacio2021mmarco,
       title={mMARCO: A Multilingual Version of MS MARCO Passage Ranking Dataset}, 
-      author={Luiz Henrique Bonifacio and Vitor Jeronymo and Hugo Queiroz Abonizio and Israel Campiotti and Marzieh Fadaee and  and Roberto Lotufo and Rodrigo Nogueira},
+      author={Luiz Henrique Bonifacio and Israel Campiotti and Roberto Lotufo and Rodrigo Nogueira},
       year={2021},
       eprint={2108.13897},
       archivePrefix={arXiv},
