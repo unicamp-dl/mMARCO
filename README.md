@@ -65,7 +65,7 @@ python -m pyserini.index -collection JsonCollection \
     -generator DefaultLuceneDocumentGenerator \
     -threads 1 -input collections/portuguese-msmarco-passage/collection_jsonl/ \
     -index indexes/portuguese-lucene-index-msmarco \
-    -storePositions -storeDocvectors -storeRaw -language portuguese
+    -storePositions -storeDocvectors -storeRaw -language pt
 ```
 As the original English set, the built index should have 8,841,823 documents.
 
